@@ -1,0 +1,28 @@
+p.copyright {
+  margin-top: 1em;
+  text-align:center;
+  color: #595959;
+}
+footer {
+  background-color: #c0c3c2;
+  padding: 25px 0;
+  display: block;
+}
+div.svg {
+  text-align:center;
+}
+table.disptbl {
+  margin: auto;
+  width: 90%;
+}
+table.disptbl tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+table.disptbl th {
+  background-color: #4cd050;
+  color: white;
+}
+table.disptbl th, table.disptbl td {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
