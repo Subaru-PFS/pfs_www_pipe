@@ -5,82 +5,114 @@
   <title>PFS-Pipe - List of open repository and issue trackers</title>
   <link rel="stylesheet" href="/global.css" type="text/css" media="all">
   <style type="text/css">
-    a.repo:link {color: #ee82ee; }
-    a.repo:visited {color: #ee82ee; }
-    a.jira:link {color: #6495ed; }
-    a.jira:visited {color: #6495ed; }
+    .gplv3 {background-color: #f2c0f2;}
   </style>
 </head>
 <body>
-<h3> PFS Software Repository and Issue Tracker </h3>
+<h3>About Subaru PFS Survey Software</h3>
+
+<p><a href="http://pfs.ipmu.jp/">Subaru Prime Focus Spectrograph (PFS)</a> is 
+an optical and near-infrared multi-fiber spectrograph with 2394 science fibers, 
+which are distributed in 1.3 degree diameter field of view at Subaru 8.2m 
+telescope. 
+PFS takes the role for the spectroscopic part of <a href="http://sumire.ipmu.jp/en/">the Subaru Measurement of Images and Redshifts (SuMIRe) project</a>, 
+while <a href="http://www.subarutelescope.org/Observing/Instruments/HSC/">Hyper Suprime-Cam (HSC)</a> works on the imaging part. 
+<br />
+In parallel to the PFS will be operated as a facility instrument of the Subaru, 
+a large survey program under the Subaru Strategic Program (SSP), 
+of which the current framework is up to 5 years with &sim;300 nights in total,
+is assumed to be operated using the PFS.
+Data analysis and survey operation (tiling and object to exposure mapping) are 
+handled by three software packages: survey planning and tracking (SPT), 
+exposure targeting software (ETS), and data reduction pipeline (DRP); 
+while instrument control is developed in pararell to hardware development 
+and in separate package from these three. 
+The survey planning and tracking software (SPT) is to manage survey plans 
+according to the progresses and updates reconciling the inputs from observers 
+and survey operators with the outputs from the data quality assessment and 
+assurance.
+The exposure targeting software (ETS) provides assignments of the ﬁbers to 
+target objects at individual exposures taking into account various factors 
+such as ﬂexures of the telescope and the prime focus instrument of PFS, 
+the residual eﬀects of atmospheric dispersion after corrections by Atmospheric 
+Dispersion Corrector (ADC), and so on. 
+The data reduction pipeline (DRP) will reduce the spectral images 
+from exposures, transform them into one-dimensional calibrated spectra and 
+measure spectroscopic parameters.
+</p>
+
+<h3>Project resources</h3>
+
+<p>2D DRP repositories (drp_stella, drp_stella_data, drp_instmodel, drp_instdata, obs_pfs; <span class="gplv3">colorized</span> in table following) are under GPLv3, all other repositories are under GPLv2.</p>
+
+<table class="disptbl">
+<thead>
+<tr>
+  <th>Package</th>
+  <th>Software module</th>
+  <th>Code repository</th>
+  <th>Project at <a href="http://pfspipe.ipmu.jp/jira/">JIRA</a> for issue tracking</th>
+</tr>
+</thead>
+</tbody>
+<tr>
+  <td rowspan="3">Project wide</td>
+  <td>PFS Datamodel (Definition of structure of data over entire PFS project)</td>
+  <td><a href="https://github.com/Subaru-PFS/datamodel">datamodel</a></td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/DAMD">DAMD</a></td>
+</tr>
+<tr>
+  <td>Documents</td>
+  <td><a href="https://github.com/Subaru-PFS/doc">doc</a></td>
+  <td>(in project relates to each document)</td>
+</tr>
+<tr>
+  <td>Instrument configuration and data structure mapping</td>
+  <td>(used in various data repository)</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/SCAM">SCAM</a></td>
+</tr>
+
+<tr>
+  <td rowspan="4">DRP</td>
+  <td>2D DRP</td>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a> (code) <br /> <a href="https://github.com/Subaru-PFS/drp_stella_data">drp_stella_data</a> (data)</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D">PIPE2D</a></td>
+</tr>
+<tr>
+  <td>Instrument model</td>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instmodel">drp_instmodel</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Instrument simulator</td>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instdata">drp_instdata</a></td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/SIM2D">SIM2D</a></td>
+</tr>
+<tr>
+  <td>Wrapper for LSST/HSC pipeline (PFS-specific module in the HSC/LSST stack, to codify part of the inputs and outputs of the 2d pipeline)</td>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/obs_pfs">obs_pfs</a><//td>
+  <td></td>
+</tr>
+
+<tr>
+  <td rowspan="1">ETS</td>
+  <td>Fiber assignment software</td>
+  <td><a href="https://github.com/Subaru-PFS/ets_fiber_assigner">ets_fiber_assigner</a></td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/FIBERALLOC">FIBERALLOC</a></td>
+<tr>
+
+<tr>
+  <td rowspan="1">SPT</td>
+  <td>Exposure time calculator (ETC)</td>
+  <td><a href="https://github.com/Subaru-PFS/spt_ExposureTimeCalculator">spt_ExposureTimeCalculator</a></td>
+  <td>(to be defined)</td>
+</tr>
+</tbody>
+</table>
 
 
-<h4>Project wide</h4>
 
-<ul>
-<li> PFS datamodel <br>
-repository : <a class="repo" href="https://github.com/Subaru-PFS/datamodel"> datamodel </a><br>
-Issue tracker: <a class="jira" href="https://pfspipe.ipmu.jp/jira/browse/DAMD"> JIRA/DAMD </a>
-</li>
-<li> Project wide documents <br>
-repository : <a class="repo" href="https://github.com/Subaru-PFS/doc"> doc </a><br>
-Issue tracker: N/A (overlaped by several software packages)
-</li>
-</ul>
 
-<h4> DRP (Data Reduction Pipeline)</h4>
-repositories:<br>
-<ul>
-<li>
-2D DRP : <a class="repo" href="https://github.com/Subaru-PFS/drp_stella"> drp_stella </a>
-</li>
-<li>
-Data for drp_stella : <a class="repo" href="https://github.com/Subaru-PFS/drp_stella_data"> drp_stella_data </a>
-Instrument model : <a class="repo" href="https://github.com/Subaru-PFS/drp_instmodel"> drp_instmodel </a>
-</li>
-<li>
-Instrument data simulator : <a class="repo" href="https://github.com/Subaru-PFS/drp_instdata"> drp_instdata </a>
-</li>
-<li>
-Module for LSST/HSC pipeline stack to invest and correct PFS images : <a class="repo" href="https://github.com/Subaru-PFS/obs_pfs"> obs_pfs </a>
-</li>
-<li>
-Documentations : <a class="repo" href="https://github.com/Subaru-PFS/drp_doc"> drp_doc </a>
-</li>
-</ul>
-
-Issue Trackers: <br>
-<ul>
-<li> 
-<a class="jira" href="https://pfspipe.ipmu.jp/jira/browse/SIM2D"> JIRA/SIM2D </a>
-</li>
-<li> 
-<a class="jira" href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D"> JIRA/PIPE2D </a>
-</li>
-<li> 
-<a class="jira" href="https://pfspipe.ipmu.jp/jira/browse/SCAM"> JIRA/SCAM </a>
-</li>
-</ul>
-
-<h4>SPT (Survey Planning and Tracking) and ETS (Exposure Targeting Software)</h4>
-repositories:<br>
-<ul>
-<li>
-ETC (Exposure Time Calculator) : <a class="repo" href="https://github.com/Subaru-PFS/spt_ExposureTimeCalculator"> spt_ExposureTimeCalculator </a>
-</li>
-<li>
-Fiber Assignment Software of ETS : <a class="repo" href="https://github.com/Subaru-PFS/ets_fiber_assigner"> ets_fiber_assigner </a>
-</li>
-</ul>
- 
-Issue Trackers: <br>
-<ul>
-<li>
-<a class="jira" href="https://pfspipe.ipmu.jp/jira/browse/FIBERALLOC"> JIRA/FIBERALLOC </a>
-</li>
-</ul>
-
-<br>
 <a href="index.html"> back to top page</a><br>
 
 <footer>
