@@ -1,0 +1,14 @@
+p.copyright {
+  margin-top: 1em;
+  text-align:center;
+  color: #595959;
+}
+footer {
+  background-color: #c0c3c2;
+  padding: 25px 0;
+  display: block;
+}
+div.svg {
+  text-align:center;
+}
+
