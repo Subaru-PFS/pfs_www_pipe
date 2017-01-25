@@ -63,68 +63,95 @@ who are interested in the survey.
 <thead>
 <tr>
   <th>Package</th>
-  <th>Software module</th>
-  <th>Code repository</th>
-  <th>Project at <a href="http://pfspipe.ipmu.jp/jira/">JIRA</a> for issue tracking</th>
+  <th><a href="http://pfspipe.ipmu.jp/jira/">JIRA</a> Project</th>
+  <th>Software modules' description</th>
+  <th><a href="https://github.com/Subaru-PFS/">GitHub</a> code repositories</th>
 </tr>
 </thead>
 </tbody>
 <tr>
-  <td rowspan="3">Project wide</td>
-  <td>PFS Datamodel (Definition of structure of data over entire PFS project)</td>
-  <td><a href="https://github.com/Subaru-PFS/datamodel">datamodel</a></td>
+  <td rowspan="2">Project wide</td>
   <td><a href="https://pfspipe.ipmu.jp/jira/browse/DAMD">DAMD</a></td>
+  <td>PFS Datamodel. This provides a standardized representation of all data
+    produced by PFS. 
+    (Definition of structure of data over entire PFS project, 
+    includes file name schema, instrument on site data storage structure, 
+    detailed data format like FITS)</td>
+  <td><a href="https://github.com/Subaru-PFS/datamodel">datamodel</a></td>
 </tr>
 <tr>
-  <td>Documents</td>
-  <td><a href="https://github.com/Subaru-PFS/doc">doc</a></td>
-  <td>(in project relates to each document)</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/INFRA">INFRA</a></td>
+  <td>PFS software development infrastructure. Documentation and configuration 
+    of support tools are handled in this project.
+    Any infrastrucural request shall go here.</td>
+  <td><a href="https://github.com/Subaru-PFS/doc">doc</a>, 
+      <a href="https://github.com/Subaru-PFS/pfs_www_pipe">pfs_www_pipe</a>
+      </td>
 </tr>
 <tr>
-  <td>Instrument configuration and data structure mapping</td>
-  <td>(used in various data repository)</td>
-  <td><a href="https://pfspipe.ipmu.jp/jira/browse/SCAM">SCAM</a></td>
-</tr>
-
-<tr>
-  <td rowspan="4">DRP</td>
-  <td>2D DRP</td>
-  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a> (code) <br /> <a href="https://github.com/Subaru-PFS/drp_stella_data">drp_stella_data</a> (data)</td>
-  <td><a href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D">PIPE2D</a></td>
-</tr>
-<tr>
-  <td>Instrument model</td>
-  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instmodel">drp_instmodel</a></td>
-  <td></td>
+  <td>ICS</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/INSTRM">INSTRM</a></td>
+  <td>Instrument control software. This provides codes for (almost all of) 
+    the instrument control and their configurations.
+    (Some repositories are excluded from this eco-system, due to NDA or 
+    other reasons.)</td>
+  <td><a href="https://github.com/Subaru-PFS?q=ics_">ics_*</a>,
+      <a href="https://github.com/Subaru-PFS/tron_tron">tron_tron</a>,
+      <a href="https://github.com/Subaru-PFS/tron_actorcore">tron_actorcore</a>
+      </td>
 </tr>
 <tr>
-  <td>Instrument simulator</td>
-  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instdata">drp_instdata</a></td>
+  <td rowspan="3">DRP</td>
+  <td rowspan="2"><a href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D">PIPE2D</a></td>
+  <td>The 2D data reduction pipeline. The 2D pipeline receives raw images
+    read out from the detector and produces produces one-dimensional,
+    sky-subtracted, flux- and wavelength-calibrated spectra ready for
+    scientific analyses.</td>
+  <td class="gplv3">
+    <a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a> (code) <br />
+    <a href="https://github.com/Subaru-PFS/drp_stella_data">drp_stella_data</a> (data)
+    </td>
+</tr>
+<tr>
+  <td>Wrapper for LSST/HSC pipeline (PFS-specific module in the HSC/LSST 
+    stack, to codify part of the inputs and outputs of the 2d pipeline)</td>
+  <td class="gplv3">
+    <a href="https://github.com/Subaru-PFS/obs_pfs">obs_pfs</a>
+    </td>
+</tr>
+<tr>
   <td><a href="https://pfspipe.ipmu.jp/jira/browse/SIM2D">SIM2D</a></td>
+  <td>The 2D image simulator. This simulates raw images as might be produced
+    by the spectrograph detectors based on ray-tracing of the optical
+    model and incorportation of detector characteristics.</td>
+  <td class="gplv3">
+    <a href="https://github.com/Subaru-PFS/drp_instmodel">drp_instmodel</a> (simulator) <br/> 
+    <a href="https://github.com/Subaru-PFS/drp_instdata">drp_instdata</a> (model)
+    </td>
 </tr>
 <tr>
-  <td>Wrapper for LSST/HSC pipeline (PFS-specific module in the HSC/LSST stack, to codify part of the inputs and outputs of the 2d pipeline)</td>
-  <td class="gplv3"><a href="https://github.com/Subaru-PFS/obs_pfs">obs_pfs</a><//td>
-  <td><a href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D">PIPE2D</a></td>
-</tr>
-
-<tr>
-  <td rowspan="1">ETS</td>
+  <td>ETS</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/FIBERALLOC">FIBERALLOC</a></td>
   <td>Fiber assignment software</td>
   <td><a href="https://github.com/Subaru-PFS/ets_fiber_assigner">ets_fiber_assigner</a></td>
-  <td><a href="https://pfspipe.ipmu.jp/jira/browse/FIBERALLOC">FIBERALLOC</a></td>
 </tr>
-
 <tr>
-  <td rowspan="1">SPT</td>
+  <td rowspan="3">SPT</td>
+  <td rowspan="2"><a href="https://pfspipe.ipmu.jp/jira/browse/SURVEY">SURVEY</a></td>
   <td>Exposure time calculator (ETC)</td>
   <td><a href="https://github.com/Subaru-PFS/spt_ExposureTimeCalculator">spt_ExposureTimeCalculator</a></td>
-  <td>(to be defined)</td>
+</tr>
+<tr>
+  <td>Survey operational database system</td>
+  <td><a href="https://github.com/Subaru-PFS/spt_operational_database">spt_operational_database</a></td>
+</tr>
+<tr>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/DB">DB</a></td>
+  <td>Survey science database</td>
+  <td></td>
 </tr>
 </tbody>
 </table>
-
-
 
 
 <div class="footlink">
