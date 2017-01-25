@@ -3,10 +3,17 @@ p.copyright {
   text-align:center;
   color: #595959;
 }
+div.maintext {
+  margin-left: 1.5em;
+}
+div.footlink {
+  margin-top: .5em;
+}
 footer {
   background-color: #c0c3c2;
   padding: 25px 0;
   display: block;
+  margin-top: .5em;
 }
 div.svg {
   text-align:center;
