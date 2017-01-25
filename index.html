@@ -36,6 +36,12 @@
         function() {window.location = "replist.html"; });
       document.getElementById('btn_github').addEventListener('click', 
         function() {window.location = "https://github.com/subaru-pfs"; });
+      document.getElementById('btn_slack').addEventListener('click', 
+        function() {window.location = "https://sumire-pfs.slack.com/"; });
+      document.getElementById('btn_travis').addEventListener('click', 
+        function() {window.location = "https://travis-ci.org/Subaru-PFS/"; });
+      document.getElementById('btn_maillist').addEventListener('click', 
+        function() {window.location = "https://pfspipe.ipmu.jp/mailman/listinfo"; });
     }
   </script>
 </head>
@@ -44,15 +50,27 @@
 <svg xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   width="800" height="450" viewBox="0 0 800 450">
-  <g class="button" transform="translate(140, 100)">
+  <g class="button" transform="translate(140, 50)">
     <rect id="btn_jira" width="230" height="100" rx="20" ry="20" />
     <text x="90" y="60">JIRA</text>
   </g>
-  <g class="button" transform="translate(460, 100)">
+  <g class="button" transform="translate(460, 50)">
     <rect id="btn_github" width="230" height="100" rx="20" ry="20" />
     <text x="80" y="60">GitHub</text>
   </g>
-  <g class="button_about" transform="translate(300, 250)">
+  <g class="button" transform="translate(140, 190)">
+    <rect id="btn_slack" width="150" height="70" rx="20" ry="20" />
+    <a xlink:href="https://sumire-pfs.slack.com/"><text x="50" y="45">Slack</text></a>
+  </g>
+  <g class="button" transform="translate(340, 190)">
+    <rect id="btn_travis" width="150" height="70" rx="20" ry="20" />
+    <a xlink:href="https://travis-ci.org/Subaru-PFS/"><text x="30" y="45">TravisCI</text></a>
+  </g>
+  <g class="button" transform="translate(540, 190)">
+    <rect id="btn_maillist" width="150" height="70" rx="20" ry="20" />
+    <a xlink:href="https://pfspipe.ipmu.jp/mailman/listinfo"><text x="30" y="45">Mail List</text></a>
+  </g>
+  <g class="button_about" transform="translate(300, 300)">
     <rect id="btn_about" width="230" height="100" rx="20" ry="20" />
     <text x="80" y="60">About</text>
   </g>
