@@ -3,10 +3,17 @@ p.copyright {
   text-align:center;
   color: #595959;
 }
+div.maintext {
+  margin-left: 1.5em;
+}
+div.footlink {
+  margin-top: .5em;
+}
 footer {
   background-color: #c0c3c2;
   padding: 25px 0;
   display: block;
+  margin-top: .5em;
 }
 div.svg {
   text-align:center;
@@ -25,4 +32,30 @@ table.disptbl th {
 table.disptbl th, table.disptbl td {
   border-bottom: 1px solid black;
   text-align: center;
+}
+
+/*=========================== SVG BUTTON =================================*/
+div.svg .button {
+  stroke: #2fff80;
+  stroke-width: 4px;
+  fill: #7fffd4;
+  cursor: pointer;
+}
+div.svg .button:hover {
+  fill: #cfffe6;
+}
+div.svg .button text, div.svg .button_about text {
+  pointer-events: none;
+  font-size: 25px;
+  fill: #000000;
+  stroke: none;
+}
+div.svg .button_about {
+  stroke: #6495ed;
+  stroke-width: 4px;
+  fill: #97cefa;
+  cursor: pointer;
+}
+div.svg .button_about:hover {
+  fill: #bbffff;
 }
