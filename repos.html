@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PFS-Pipe - Subar-PFS GitHub organization</title>
+  <link rel="stylesheet" href="/global.css" type="text/css" media="all">
+  <style type="text/css">
+    .gplv3 {background-color: #f2c0f2;}
+  </style>
+</head>
+<body>
+<h2>About Subaru-PFS GitHub organization</h2>
+
+<div class="maintext">
+<p><a href="http://pfs.ipmu.jp/">Subaru Prime Focus Spectrograph (PFS)</a> 
+places its all repositories in 
+<a href="https://github.com/Subaru-PFS">Subaru-PFS GitHub organization</a>. 
+To request new repositories, file a ticket to 
+<a href="https://pfspipe.ipmu.jp/jira/browse/INFRA">INFRA project at PFS JIRA</a>.</p>
+
+
+<h3>Repositories</h3>
+
+<div class="maintext">
+<p>2D DRP repositories (drp_stella, drp_stella_data, drp_instmodel, drp_instdata, obs_pfs; <span class="gplv3">colorized</span> in table following) are under GPLv3, all other repositories are under GPLv2.</p>
+
+<p>Repositories are categorized by their headings of names as follows:</p>
+
+<dl>
+  <dt>pfs_</dt>
+  <dd>Repositories for project general</dd>
+  <dt>ics_</dt>
+  <dd>Instrument Control Software (ICS) repositories</dd>
+  <dt>drp_</dt>
+  <dd>Data Reduction Pipeline (DRP) repositories</dd>
+  <dt>ets_</dt>
+  <dd>Exposure Targetting Software (ETS) repositories, includes fiber assignment.</dd>
+  <dt>spt_</dt>
+  <dd>Survey Planning and Targetting (SPT) sofotware, includes survey coordination and operation, exposure time calculator, and so on.</dd>
+</dl>
+</div>
+
+<table class="disptbl">
+<thead>
+<tr>
+  <th>Package</th>
+  <th>Category</th>
+  <th><a href="https://github.com/Subaru-PFS/">GitHub</a> repository</th>
+  <th>Software module's description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td rowspan="4">Project wide</td>
+  <td><a href="https://pfspipe.ipmu.jp/jira/browse/DAMD">DAMD</a></td>
+  <td><a href="https://github.com/Subaru-PFS/datamodel">datamodel</a></td>
+  <td>PFS Datamodel</td>
+</tr>
+<tr>
+  <td rowspan="2"><a href="https://pfspipe.ipmu.jp/jira/browse/INFRA">INFRA</a></td>
+  <td><a href="https://github.com/Subaru-PFS/doc">doc</a></td>
+  <td>Project wide documents</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/pfs_www_pipe">pfs_www_pipe</a></td>
+  <td>Contents of pfspipe.ipmu.jp web site</td>
+</tr>
+<tr>
+  <td>Tools</td>
+  <td><a href="https://github.com/Subaru-PFS/pfs_pipe2d">pfs_pipe2d</a></td>
+  <td>A package to build and test the 2D pipeline (TravisCI)</td>
+</tr>
+
+<tr>
+  <td rowspan="30">ICS</td>
+  <td rowspan="3">Instrument general</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_doc">ics_doc</a></td>
+  <td>ICS design and study documentations</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_config">ics_config</a></td>
+  <td>ICS configuration files</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_dnsmasq">ics_dnsmasq</a></td>
+  <td>ICS DHCP/DNS configuration (dnsmasq)</td>
+</tr>
+<tr>
+  <td rowspan="5">tron</td>
+  <td><a href="https://github.com/Subaru-PFS/tron_tron">tron_tron</a></td>
+  <td>tron main server module</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/tron_actorcore">tron_actorcore</a></td>
+  <td>Actorcore (client library) of tron</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_actorkeys">ics_actorkeys</a></td>
+  <td>ICS actor key repository (command/option, status definitions)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_coreActor">ics_coreActor</a></td>
+  <td>ICS snippets (actor power on etc.)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_archiver">ics_archiver</a></td>
+  <td>tron status archive service</td>
+</tr>
+<tr>
+  <td>SpS - ENU</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_enuActor">ics_enuActor</a></td>
+  <td>ICS SpS (Spectrograph) ENU (Entrance Unit) controller actor</td>
+</tr>
+<tr>
+  <td rowspan="6">SpS - xCU (camera)</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_xcuActor">ics_xcuActor</a></td>
+  <td>camera unit controller (actor part)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_xcu_fpga">ics_xcu_fpga</a></td>
+  <td>xCU BEE FPGA code (VHDL)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_xcu_rtdADIO">ics_xcu_rtdADIO</a></td>
+  <td>rtd, AD, IO code</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_xcu_fee">ics_xcu_fee</a></td>
+  <td>FEE (Front End Electronics) board code</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_xcu_pcm">ics_xcu_pcm</a></td>
+  <td>PCM (Power Control Module) board code</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_ccdActor">ics_ccdActor</a></td>
+  <td>CCD readout control</td>
+</tr>
+<tr>
+  <td rowspan="1">SpS - NCU (IR camera)</td>
+  <td>ics_hxActor</td>
+  <td>(under planning)</td>
+</tr>
+<tr>
+  <td rowspan="1">SpS - SCR (environment)</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_empActor">ics_empActor</a></td>
+  <td>Environment monitoring (by RasPi for SCR)</td>
+</tr>
+<tr>
+  <td rowspan="5">SpS - AIT</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_spsaitActor">ics_spsaitActor</a></td>
+  <td>Actor of AIT tools for SpS</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_sps_engineering_monitorData">ics_sps_engineering_monitorData</a></td>
+  <td>SpS AIT data monitor</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_sps_engineering_plotData">ics_sps_engineering_plotData</a></td>
+  <td>SpS AIT data plotter (GUI)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_sps_engineering_Lib_dataQuery">ics_sps_engineering_Lib_dataQuery</a></td>
+  <td>SpS AIT data query library (to database)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_sps_engineering_JabberBot">ics_sps_engineering_JabberBot</a></td>
+  <td>SpS AIT bot tool to Jabber (XMPP)</td>
+</tr>
+<tr>
+  <td rowspan="7">PFI</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_fpsActor">ics_fpsActor</a></td>
+  <td>Fiber Positioning Sequencer (FPS)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_pebActor">ics_pebActor</a></td>
+  <td>PFI Electric Box interface</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_fvcActor">ics_fvcActor</a></td>
+  <td>PFI Fiber Viewing Camera</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_agccActor">ics_agccActor</a></td>
+  <td>AutoGuide Camera Controller</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_fccActor">ics_fccActor</a></td>
+  <td>Field Center Camera</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_pfiaitActor">ics_pfiaitActor</a></td>
+  <td>PFI AIT tools</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_macActor">ics_macActor</a></td>
+  <td>MLP1 AG (AutoGuide) Converter</td>
+</tr>
+<tr>
+  <td rowspan="1">MCS</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_mcsActor">ics_mcsActor</a></td>
+  <td>Metrology camera system (MCS)</td>
+</tr>
+<tr>
+  <td rowspan="6">DRP</td>
+  <td>General</td>
+  <td><a href="https://github.com/Subaru-PFS/drp_doc">drp_doc</a></td>
+  <td>Documentation</td>
+</tr>
+<tr>
+  <td rowspan="5">2D DRP</td>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a></td>
+  <td>2D DRP (main)</td>
+</tr>
+<tr>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella_data</a></td>
+  <td>Data resource for drp_stella (test data etc.)</td>
+</tr>
+<tr>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instmodel">drp_instmodel</a></td>
+  <td>Instrument model</td>
+</tr>
+<tr>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_instdata">drp_instdata</a></td>
+  <td>Instrument data simulator</td>
+</tr>
+<tr>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/obs_pfs">obs_pfs</a></td>
+  <td>Module for LSST/HST pipeline stack to invest and correct PFS images</td>
+</tr>
+<tr>
+  <td>ETS</td>
+  <td>Fiber allocation</td>
+  <td><a href="https://github.com/Subaru-PFS/ets_fiber_assigner">ets_fiber_assigner</a></td>
+  <td>Fiber Assignment Software of ETS</td>
+</tr>
+<tr>
+  <td rowspan="3">SPT</td>
+  <td>Survey planning</td>
+  <td><a href="https://github.com/Subaru-PFS/spt_doc">spt_doc</a></td>
+  <td>Design documentations</td>
+</tr>
+<tr>
+  <td>Survey simulation</td>
+  <td><a href="https://github.com/Subaru-PFS/spt_ExposureTimeCalculator">spt_ExposureTimeCalculator</a></td>
+  <td>ETC (Exposure Time Calculator)</td>
+</tr>
+<tr>
+  <td>Survey database</td>
+  <td><a href="https://github.com/Subaru-PFS/spt_operational_database">spt_operational_database</a></td>
+  <td>Survey operational database</td>
+</tr>
+</tbody>
+</table>
+
+<div class="footlink">
+<a href="index.html">back to top page</a>
+</div>
+<footer>
+<p class="copyright">Copyright &#169; <a href="http://pfs.ipmu.jp/">Subaru Prime Focus Spectrograph (PFS) Project</a></p>
+</footer>
+</body>
+</html>
