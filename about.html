@@ -137,6 +137,41 @@ Also refer <a href="https://github.com/Subaru-PFS/doc/tree/master/development-ma
 and <a href="https://pfspipe.ipmu.jp/jira/">pfspipe JIRA</a>, the Subaru PFS 
 Software team is using following services for our activity.</p>
 
+<h4>git-lfs</h4>
+
+<div class="maintext">
+<p>PFS software development uses 
+<a href="https://github.com/blog/1986-announcing-git-large-file-storage-lfs">Git LFS support on GitHub.com</a> 
+to store, track, and distribute large binary data files, such as FITS sample 
+data file to prenset definitions or to run CI, or binary configuration file 
+for firmware. Refer <a href="https://git-lfs.github.com">Git Large File Storage (LFS) web site</a> for installation and usage.</p>
+<p>In the PFS software development project, it is encouraged to follow 
+recommendations listed below for maintenanceability and userbility such as to 
+reduce network load and local storage space for normal users.</p>
+<ul>
+  <li>Repository administrator shall consider to add LFS configuration for 
+    possible file formats, like .fits, and to check '.gitattributes' file 
+    registered into and pushed to the repository.</li>
+  <li>If files to Git LFS are only used for CI, testing, or debugging, 
+    consider to have a separated data repository, like 
+    <a href="https://github.com/Subaru-PFS/drp_stella_data">drp_stella_data</a> 
+    repository for 
+    <a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a> 
+    repository. 'drp_stella_data' repository contains test and sample data 
+    mainly used to run code tests
+    at <a href="https://travis-ci.org/Subaru-PFS">TravisCI</a>.</li>
+  <li>It is recommended to have lines in README or docs/ with its target usage 
+    like 'only for code testing but not for normal use', or 'files are 
+    required to run code' if the repository is using git-lfs, for users to be 
+    easily noticed whether ones need to download LFS contents or not.</li>
+  <li>Users are not recommended to download files in LFS until files are 
+    really required for their use. It is both to reduce unnecessarily storage 
+    volume taken at user local and also network traffic from 
+    <a href="https://help.github.com/articles/about-storage-and-bandwidth-usage">
+    git repository service (github.com)</a>.</li>
+</ul>
+</div>
+
 <h4>Slack</h4>
 
 <div class="maintext">
