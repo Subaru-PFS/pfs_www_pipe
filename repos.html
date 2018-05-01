@@ -72,7 +72,7 @@ To request new repositories, file a ticket to
 </tr>
 
 <tr>
-  <td rowspan="38">ICS</td>
+  <td rowspan="46">ICS</td>
   <td rowspan="5">Instrument general</td>
   <td><a href="https://github.com/Subaru-PFS/ics_doc">ics_doc</a></td>
   <td>ICS design and study documentations</td>
@@ -94,13 +94,25 @@ To request new repositories, file a ticket to
   <td>A very simple GUI template connected to mhs</td>
 </tr>
 <tr>
-  <td rowspan="2">Instrument operation</td>
+  <td rowspan="5">Instrument operation</td>
   <td><a href="https://github.com/Subaru-PFS/ics_sscActor">ics_sscActor</a></td>
   <td>SNMP status collector actor</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_sthActor">ics_sthActor</a></td>
   <td>SNMP trap handling actor</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_alertsActor">ics_alertsActor</a></td>
+  <td>PFS alert logic, and metrology forwarding to STS</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_gen2Actor">ics_gen2Actor</a></td>
+  <td>The Gen2-to-MHS interface program</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/PFS_kansoku">PFS_kansoku</a></td>
+  <td>The OCS files for controlling PFS via ics_gen2Actor</td>
 </tr>
 <tr>
   <td rowspan="5">tron</td>
@@ -124,6 +136,11 @@ To request new repositories, file a ticket to
   <td>tron status archive service</td>
 </tr>
 <tr>
+  <td>SpS - General</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_spsClient">ics_spsClient</a></td>
+  <td>pyqt5 interface to control and monitor spectrograph system</td>
+</tr>
+<tr>
   <td rowspan="2">SpS - ENU</td>
   <td><a href="https://github.com/Subaru-PFS/ics_enuActor">ics_enuActor</a></td>
   <td>ICS SpS (Spectrograph) ENU (Entrance Unit) controller actor</td>
@@ -133,7 +150,7 @@ To request new repositories, file a ticket to
   <td>ENU bia-shutter interlock board firmware</td>
 </tr>
 <tr>
-  <td rowspan="6">SpS - xCU (camera)</td>
+  <td rowspan="8">SpS - xCU (camera)</td>
   <td><a href="https://github.com/Subaru-PFS/ics_xcuActor">ics_xcuActor</a></td>
   <td>camera unit controller (actor part)</td>
 </tr>
@@ -156,6 +173,14 @@ To request new repositories, file a ticket to
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_ccdActor">ics_ccdActor</a></td>
   <td>CCD readout control</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_roughActor">ics_roughActor</a></td>
+  <td>Roughing pump and gauge control</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_idgActor">ics_idgActor</a></td>
+  <td>JHU IDG-specific integration and testing routines</td>
 </tr>
 <tr>
   <td rowspan="1">SpS - NCU (IR camera)</td>
@@ -189,7 +214,7 @@ To request new repositories, file a ticket to
   <td>SpS AIT bot tool to Jabber (XMPP)</td>
 </tr>
 <tr>
-  <td rowspan="8">PFI</td>
+  <td rowspan="9">PFI</td>
   <td><a href="https://github.com/Subaru-PFS/ics_fpsActor">ics_fpsActor</a></td>
   <td>Fiber Positioning Sequencer (FPS)</td>
 </tr>
@@ -222,13 +247,21 @@ To request new repositories, file a ticket to
   <td>Cobra operation simulator</td>
 </tr>
 <tr>
-  <td rowspan="2">MCS</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_pfiGUI">ics_pfiGUI</a></td>
+  <td>GUI for PFI</td>
+</tr>
+<tr>
+  <td rowspan="3">MCS</td>
   <td><a href="https://github.com/Subaru-PFS/ics_mcsActor">ics_mcsActor</a></td>
   <td>Metrology camera system (MCS)</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_mebActor">ics_mebActor</a></td>
   <td>MCS Electric Box interface</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_mcsGUI">ics_mcsGUI</a></td>
+  <td>GUI for MCS</td>
 </tr>
 <tr>
   <td rowspan="1">Production</td>
