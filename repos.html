@@ -51,7 +51,7 @@ To request new repositories, file a ticket to
 </thead>
 <tbody>
 <tr>
-  <td rowspan="5">Project wide</td>
+  <td rowspan="6">Project wide</td>
   <td><a href="https://pfspipe.ipmu.jp/jira/browse/DAMD">DAMD</a></td>
   <td><a href="https://github.com/Subaru-PFS/datamodel">datamodel</a></td>
   <td>PFS Datamodel</td>
@@ -66,9 +66,13 @@ To request new repositories, file a ticket to
   <td>Contents of pfspipe.ipmu.jp web site</td>
 </tr>
 <tr>
-  <td>Tools</td>
+  <td rowspan="2">Tools</td>
   <td><a href="https://github.com/Subaru-PFS/pfs_pipe2d">pfs_pipe2d</a></td>
   <td>A package to build and test the 2D pipeline (TravisCI)</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/pfs_utils">pfs_utils</a></td>
+  <td>PFS modules shared across ICS or with DRP</td>
 </tr>
 <tr>
   <td>INSTRM</td>
@@ -77,7 +81,7 @@ To request new repositories, file a ticket to
 </tr>
 
 <tr>
-  <td rowspan="51">ICS</td>
+  <td rowspan="54">ICS</td>
   <td rowspan="5">Instrument general</td>
   <td><a href="https://github.com/Subaru-PFS/ics_doc">ics_doc</a></td>
   <td>ICS design and study documentations</td>
@@ -201,8 +205,8 @@ To request new repositories, file a ticket to
 </tr>
 <tr>
   <td rowspan="1">SpS - NCU (IR camera)</td>
-  <td>ics_hxActor</td>
-  <td>(under planning)</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_hxActor">ics_hxActor</a></td>
+  <td>The actor which controls H4RGs</td>
 </tr>
 <tr>
   <td rowspan="1">SpS - SCR (environment)</td>
@@ -210,7 +214,7 @@ To request new repositories, file a ticket to
   <td>Environment monitoring (by RasPi for SCR)</td>
 </tr>
 <tr>
-  <td rowspan="5">SpS - AIT</td>
+  <td rowspan="6">SpS - AIT</td>
   <td><a href="https://github.com/Subaru-PFS/ics_spsaitActor">ics_spsaitActor</a></td>
   <td>Actor of AIT tools for SpS</td>
 </tr>
@@ -231,7 +235,11 @@ To request new repositories, file a ticket to
   <td>SpS AIT bot tool to Jabber (XMPP)</td>
 </tr>
 <tr>
-  <td rowspan="11">PFI</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_drpActor">ics_drpActor</a></td>
+  <td>Actor which automatically ingest and detrend incoming exposures</td>
+</tr>
+<tr>
+  <td rowspan="12">PFI</td>
   <td><a href="https://github.com/Subaru-PFS/ics_fpsActor">ics_fpsActor</a></td>
   <td>Fiber Positioning Sequencer (FPS)</td>
 </tr>
@@ -258,6 +266,10 @@ To request new repositories, file a ticket to
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_macActor">ics_macActor</a></td>
   <td>MLP1 AG (AutoGuide) Converter</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_mps_fpga">ics_mps_fpga</a></td>
+  <td>The FPGA code for the cobras</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_cobraOps">ics_cobraOps</a></td>
@@ -294,15 +306,28 @@ To request new repositories, file a ticket to
   <td>Physical deployment registration</td>
 </tr>
 <tr>
-  <td rowspan="7">DRP</td>
+  <td rowspan="1">FOCCoS</td>
+  <td><a href="https://github.com/Subaru-PFS/ics_fmsActor">ics_fmsActor</a></td>
+  <td>To operate fiber monitoring system</td>
+</tr>
+<tr>
+  <td rowspan="9">DRP</td>
   <td>General</td>
   <td><a href="https://github.com/Subaru-PFS/drp_doc">drp_doc</a></td>
   <td>Documentation</td>
 </tr>
 <tr>
-  <td rowspan="1">1D DRP</td>
+  <td rowspan="3">1D DRP</td>
   <td><a href="https://github.com/Subaru-PFS/drp_1d">drp_1d</a></td>
-  <td>1D Data Reduction Pipeline (main)</td>
+  <td>Algorithms library for 1D Data Reduction Pipeline</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/drp_1dpipe">drp_1dpipe</a></td>
+  <td>1D Data Reduction Pipeline launcher</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga1d">drp_ga1d</a></td>
+  <td>A data analysis pipeline for the Galactic Archaeology science</td>
 </tr>
 <tr>
   <td rowspan="5">2D DRP</td>
@@ -350,6 +375,12 @@ To request new repositories, file a ticket to
   <td>Survey database</td>
   <td><a href="https://github.com/Subaru-PFS/spt_operational_database">spt_operational_database</a></td>
   <td>Survey operational database</td>
+</tr>
+<tr>
+  <td rowspan="1">Sciene Database</td>
+  <td> UIs </td>
+  <td><a href="https://github.com/Subaru-PFS/scidb_specView">scidb_specView</a></td>
+  <td>PFS Spectrum Viewer Tool</td>
 </tr>
 </tbody>
 </table>
