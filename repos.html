@@ -29,6 +29,8 @@ To request new repositories, file a ticket to
 <dl>
   <dt>pfs_</dt>
   <dd>Repositories for project general</dd>
+  <dt>dev_</dt>
+  <dd>Repositories for scripts for development and analysis</dd>
   <dt>ics_</dt>
   <dd>Instrument Control Software (ICS) repositories</dd>
   <dt>drp_</dt>
@@ -83,7 +85,7 @@ To request new repositories, file a ticket to
 </tr>
 
 <tr>
-  <td rowspan="60">ICS</td>
+  <td rowspan="62">ICS</td>
   <td rowspan="7">Instrument general</td>
   <td><a href="https://github.com/Subaru-PFS/ics_doc">ics_doc</a></td>
   <td>ICS design and study documentations</td>
@@ -181,7 +183,7 @@ To request new repositories, file a ticket to
   <td>ENU bia-shutter interlock board firmware</td>
 </tr>
 <tr>
-  <td rowspan="11">SpS - xCU (camera)</td>
+  <td rowspan="12">SpS - xCU (camera)</td>
   <td><a href="https://github.com/Subaru-PFS/ics_xcuActor">ics_xcuActor</a></td>
   <td>camera unit controller (actor part)</td>
 </tr>
@@ -220,6 +222,10 @@ To request new repositories, file a ticket to
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_roughActor">ics_roughActor</a></td>
   <td>Roughing pump and gauge control</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_regulActor">ics_regulActor</a></td>
+  <td>CCD Rough temperature control loop actor</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_idgActor">ics_idgActor</a></td>
@@ -269,7 +275,7 @@ To request new repositories, file a ticket to
   <td>The actor which control the illumination of the fibers (spectral lamps ...) at SUBARU</td>
 </tr>
 <tr>
-  <td rowspan="12">PFI</td>
+  <td rowspan="13">PFI</td>
   <td><a href="https://github.com/Subaru-PFS/ics_fpsActor">ics_fpsActor</a></td>
   <td>Fiber Positioning Sequencer (FPS)</td>
 </tr>
@@ -314,6 +320,10 @@ To request new repositories, file a ticket to
   <td>Cobra motor models</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_pfilampsActor">ics_pfilampsActor</a></td>
+  <td>The PFI calibration lamp control actor</td>
+</tr>
+<tr>
   <td><a href="https://github.com/Subaru-PFS/ics_pfiGUI">ics_pfiGUI</a></td>
   <td>GUI for PFI</td>
 </tr>
@@ -341,7 +351,7 @@ To request new repositories, file a ticket to
   <td>To operate fiber monitoring system</td>
 </tr>
 <tr>
-  <td rowspan="10">DRP</td>
+  <td rowspan="11">DRP</td>
   <td>General</td>
   <td><a href="https://github.com/Subaru-PFS/drp_doc">drp_doc</a></td>
   <td>Documentation</td>
@@ -360,7 +370,7 @@ To request new repositories, file a ticket to
   <td>A data analysis pipeline for the Galactic Archaeology science</td>
 </tr>
 <tr>
-  <td rowspan="6">2D DRP</td>
+  <td rowspan="7">2D DRP</td>
   <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a></td>
   <td>2D DRP (main)</td>
 </tr>
@@ -385,14 +395,23 @@ To request new repositories, file a ticket to
   <td>F Star Template Generation code</td>
 </tr>
 <tr>
-  <td rowspan="2">ETS</td>
+  <td><a href="https://github.com/Subaru-PFS/dev_2ddrp">dev_2ddrp</a></td>
+  <td>Scripts and notebooks for 2D PFS development</td>
+</tr>
+<tr>
+  <td rowspan="3">ETS</td>
   <td rowspan="2">Fiber allocation</td>
-  <td><a href="https://github.com/Subaru-PFS/ets_fiber_assigner">ets_fiber_assigner</a></td>
-  <td>Fiber Assignment Software of ETS</td>
+  <td><a href="https://github.com/Subaru-PFS/ets_fiberalloc">ets_fiberalloc</a></td>
+  <td>The fiber allocation software repository</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ets_networkflow">ets_networkflow</a></td>
   <td>Within the survey optimization WG we are testing whether the fiber assignment can be carried out using a network flow approach as it was done for SDSS</td>
+</tr>
+<tr>
+  <td>Observation Preparation</td>
+  <td><a href="https://github.com/Subaru-PFS/ets_shuffle">ets_shuffle</a></td>
+  <td>PFS observation preparation tool based on the HETDEX shuffle</td>
 </tr>
 <tr>
   <td rowspan="3">SPT</td>
