@@ -90,7 +90,7 @@ Also refer <a href="https://github.com/Subaru-PFS/doc/tree/master/development-ma
   <td><a href="https://pfspipe.ipmu.jp/jira/browse/GA1D">GA1D</a></td>
   <td>The 1D data reduction pipeline dedicated to GA survey.</td>
   <td>
-    <a href="https://github.com/Subaru-PFS/drp_ga1d">drp_ga1d</a>
+    <a href="https://github.com/Subaru-PFS/drp_ga1d_abund">drp_ga1d_abund</a>
     </td>
 </tr>
   <td rowspan="2"><a href="https://pfspipe.ipmu.jp/jira/browse/PIPE2D">PIPE2D</a></td>
@@ -176,8 +176,7 @@ reduce network load and local storage space for normal users.</p>
     repository for 
     <a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a> 
     repository. 'drp_stella_data' repository contains test and sample data 
-    mainly used to run code tests
-    at <a href="https://travis-ci.org/Subaru-PFS">TravisCI</a>.</li>
+    mainly used to run code tests.</li>
   <li>It is recommended to have lines in README or docs/ with its target usage 
     like 'only for code testing but not for normal use', or 'files are 
     required to run code' if the repository is using git-lfs, for users to be 
@@ -201,6 +200,7 @@ system administrator (pfs_at_pfs.ipmu.jp). It is highly recommended to
 input real name (both First and Last) in 
 <a href="https://sumire-pfs.slack.com/account/profile">a user profile page</a>.
 </p>
+<!--
 <p>Below are frequently used channels, in addition to #general and #random. 
 Also JIRA notifications are posted to #jira, GitHub notifications are to 
 #github, TravisCI notifications are to each specific channel per repository 
@@ -217,13 +217,14 @@ configured.</p>
   <dt>jira-operation</dt>
   <dd>General chat on operation of PFSPIPE JIRA</dd>
 </dl>
+-->
 </div>
 
 <h4>TravisCI</h4>
 
 <div class="maintext">
 <p>PFS is using <a href="https://travis-ci.org/Subaru-PFS/">TravisCI</a> for 
-code testing on some of the repositories (mainly for 2D pipeline).</p>
+code testing on some of the repositories.</p>
 <p>If some repositories in the Subaru-PFS organization on GitHub are not listed at <a href="https://travis-ci.org/Subaru-PFS/">TravisCI</a>, 
 contact a repository owner of each repository or send a message to 
 a corresponding <a href="https://pfspipe.ipmu.jp/mailman/listinfo">mailing list 
