@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="/global.css" type="text/css" media="all">
   <style type="text/css">
     .gplv3 {background-color: #f2c0f2;}
+    .mit {background-color: #c0f2e5;}
   </style>
 </head>
 <body>
@@ -22,7 +23,8 @@ To request new repositories, file a ticket to
 <h3>Repositories</h3>
 
 <div class="maintext">
-<p>2D DRP repositories (drp_stella, drp_stella_data, drp_instmodel, drp_instdata, obs_pfs; <span class="gplv3">colorized</span> in table following) are under GPLv3, all other repositories are under GPLv2.</p>
+<p>2D DRP repositories (drp_stella, drp_stella_data, drp_instmodel, drp_instdata, obs_pfs; <span class="gplv3">colorized</span> in the table following) are under GPLv3, 
+some SPT repositories are under MIT (<span class="mit">colorized</span> in the table), and all other repositories are under GPLv2.</p>
 
 <p>Repositories are categorized by their headings of names as follows:</p>
 
@@ -42,6 +44,8 @@ To request new repositories, file a ticket to
   <dt>scidb_</dt>
   <dd>Science database reposiories</dd>
 </dl>
+
+<p>Note that 2DDRP have a few exceptions to follow lsst.</p>
 </div>
 
 <table class="disptbl">
@@ -70,7 +74,7 @@ To request new repositories, file a ticket to
   <td>Contents of pfspipe.ipmu.jp web site</td>
 </tr>
 <tr>
-  <td rowspan="5">Tools</td>
+  <td rowspan="6">Tools</td>
   <td><a href="https://github.com/Subaru-PFS/pfs_pipe2d">pfs_pipe2d</a></td>
   <td>A package to build and test the 2D pipeline (TravisCI)</td>
 </tr>
@@ -87,6 +91,10 @@ To request new repositories, file a ticket to
   <td>A Scripts for operational purposes</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/Subaru-PFS/pfs_helpdesk_tutorial">pfs_helpdesk_tutorial</a></td>
+  <td>a repo to host the webpage of the 2D DRP tutorial.</td>
+</tr>
+<tr>
   <td><a href="https://github.com/Subaru-PFS/dev_observation">dev_observation</a></td>
   <td>Notebooks used for engineering observations</td>
 </tr>
@@ -97,7 +105,7 @@ To request new repositories, file a ticket to
 </tr>
 
 <tr>
-  <td rowspan="69">ICS</td>
+  <td rowspan="75">ICS</td>
   <td rowspan="11">Instrument general</td>
   <td><a href="https://github.com/Subaru-PFS/ics_doc">ics_doc</a></td>
   <td>ICS design and study documentations</td>
@@ -205,6 +213,10 @@ To request new repositories, file a ticket to
   <td>python web interface(Flask) to monitor spectrograph sub-systems</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_gingaActor">ics_gingaActor</a></td>
+  <td>Actor to trigger real-time visualization of the drpActor postISR images</td>
+</tr>
+<tr>
   <td rowspan="2">SpS - ENU</td>
   <td><a href="https://github.com/Subaru-PFS/ics_enuActor">ics_enuActor</a></td>
   <td>ICS SpS (Spectrograph) ENU (Entrance Unit) controller actor</td>
@@ -264,7 +276,7 @@ To request new repositories, file a ticket to
 </tr>
 <tr>
   <td rowspan="1">SpS - NCU (IR camera)</td>
-  <td><a href="https://github.com/Subaru-PFS/ics_hxActor">ics_hxActor</a></td>
+  <td class="mit"><a href="https://github.com/Subaru-PFS/ics_hxActor">ics_hxActor</a></td>
   <td>The actor which controls H4RGs</td>
 </tr>
 <tr>
@@ -273,7 +285,7 @@ To request new repositories, file a ticket to
   <td>Environment monitoring (by RasPi for SCR)</td>
 </tr>
 <tr>
-  <td rowspan="8">SpS - AIT</td>
+  <td rowspan="9">SpS - AIT</td>
   <td><a href="https://github.com/Subaru-PFS/ics_spsaitActor">ics_spsaitActor</a></td>
   <td>Actor of AIT tools for SpS</td>
 </tr>
@@ -306,7 +318,11 @@ To request new repositories, file a ticket to
   <td>The actor which control the illumination of the fibers (spectral lamps ...) at SUBARU</td>
 </tr>
 <tr>
-  <td rowspan="13">PFI</td>
+  <td><a href="https://github.com/Subaru-PFS/dev_sps_analysis">dev_sps_analysis</a></td>
+  <td>Python scripts and notebooks to align and analyse performance of the Spectrograph System (SpS)</td>
+</tr>
+<tr>
+  <td rowspan="16">PFI</td>
   <td><a href="https://github.com/Subaru-PFS/ics_fpsActor">ics_fpsActor</a></td>
   <td>Fiber Positioning Sequencer (FPS)</td>
 </tr>
@@ -323,16 +339,28 @@ To request new repositories, file a ticket to
   <td>AutoGuide Camera Controller</td>
 </tr>
 <tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_agActor">ics_agActor</a></td>
+  <td>Autoguider actor to determine guiding</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_mlp1Actor">ics_mlp1Actor</a></td>
+  <td>Actor to communicate RA/Dec from telescope</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_vgwActor">ics_vgwActor</a></td>
+  <td>Tells Subaru gen2 guide images are avaiable</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/ics_vlanActor">ics_vlanActor</a></td>
+  <td>Tells mitsubishi guide images are available</td>
+</tr>
+<tr>
   <td><a href="https://github.com/Subaru-PFS/ics_fccActor">ics_fccActor</a></td>
   <td>Field Center Camera</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_pfiaitActor">ics_pfiaitActor</a></td>
   <td>PFI AIT tools</td>
-</tr>
-<tr>
-  <td><a href="https://github.com/Subaru-PFS/ics_macActor">ics_macActor</a></td>
-  <td>MLP1 AG (AutoGuide) Converter</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/ics_mps_fpga">ics_mps_fpga</a></td>
@@ -391,7 +419,7 @@ To request new repositories, file a ticket to
   <td>The SuNSS software running on the pi</td>
 </tr>
 <tr>
-  <td rowspan="15">DRP</td>
+  <td rowspan="21">DRP</td>
   <td rowspan="3">General</td>
   <td><a href="https://github.com/Subaru-PFS/drp_doc">drp_doc</a></td>
   <td>Documentation</td>
@@ -405,7 +433,7 @@ To request new repositories, file a ticket to
   <td>Configuration files in yaml and scripts for the EDR data processing</td>
 </tr>
 <tr>
-  <td rowspan="3">1D DRP</td>
+  <td rowspan="2">1D DRP</td>
   <td><a href="https://github.com/Subaru-PFS/drp_1d">drp_1d</a></td>
   <td>Algorithms library for 1D Data Reduction Pipeline</td>
 </tr>
@@ -414,11 +442,32 @@ To request new repositories, file a ticket to
   <td>1D Data Reduction Pipeline launcher</td>
 </tr>
 <tr>
+  <td rowspan="6">GA1D DRP</td>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga_datamodel">drp_ga_datamodel</a></td>
+  <td>GA 1D data model</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga_pfsspec_all">drp_ga_pfsspec_all</a></td>
+  <td>The main project of the library that the GA pipeline</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga_pfsspec_core">drp_ga_pfsspec_core</a></td>
+  <td>Submodule to ga_pfsspec</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga_pfsspec_stellar">drp_ga_pfsspec_stellar</a></td>
+  <td>Submodule to ga_pfsspec, stellar spectroscopy tools, primarily radial velocity fitting</td>
+</tr>
+<tr>
   <td><a href="https://github.com/Subaru-PFS/drp_ga1d_abund">drp_ga1d_abund</a></td>
   <td>A data analysis pipeline for the Galactic Archaeology science</td>
 </tr>
 <tr>
-  <td rowspan="9">2D DRP</td>
+  <td><a href="https://github.com/Subaru-PFS/drp_ga_pipeline">drp_ga_pipeline</a></td>
+  <td>The GA 1D pipeline, currently just a skeleton</td>
+</tr>
+<tr>
+  <td rowspan="10">2D DRP</td>
   <td class="gplv3"><a href="https://github.com/Subaru-PFS/drp_stella">drp_stella</a></td>
   <td>2D DRP (main)</td>
 </tr>
@@ -441,6 +490,10 @@ To request new repositories, file a ticket to
 <tr>
   <td class="gplv3"><a href="https://github.com/Subaru-PFS/obs_pfs">obs_pfs</a></td>
   <td>Module for LSST/HST pipeline stack to invest and correct PFS images</td>
+</tr>
+<tr>
+  <td class="gplv3"><a href="https://github.com/Subaru-PFS/daf_butler_migrate">daf_butler_migrate</a></td>
+  <td>Database schema migration tools for daf_butler, customized for PFS</td>
 </tr>
 <tr>
   <td><a href="https://github.com/Subaru-PFS/drp_fstar">drp_fstar</a></td>
@@ -474,7 +527,7 @@ To request new repositories, file a ticket to
   <td>Pointing optimization code</td>
 </tr>
 <tr>
-  <td><a href="https://github.com/Subaru-PFS/ets_target_database">ets_target_database</a></td>
+  <td class="mit"><a href="https://github.com/Subaru-PFS/ets_target_database">ets_target_database</a></td>
   <td>Database of observation targets for target selection and fiber allocation</td>
 </tr>
 <tr>
@@ -482,11 +535,11 @@ To request new repositories, file a ticket to
   <td>This repository shares codes and documentations to select flux calibration stars (F-stars) based on photometric catalogs. </td>
 </tr>
 <tr>
-  <td><a href="https://github.com/Subaru-PFS/spt_etc_webapp">spt_etc_webapp</a></td>
+  <td class="mit"><a href="https://github.com/Subaru-PFS/spt_etc_webapp">spt_etc_webapp</a></td>
   <td>PFS spectral simulator web app using PFS Exposure Time Calculator and Spectrum Simulator</td>
 </tr>
 <tr>
-  <td rowspan="3">SPT</td>
+  <td rowspan="7">SPT</td>
   <td>Survey planning</td>
   <td><a href="https://github.com/Subaru-PFS/spt_doc">spt_doc</a></td>
   <td>Design documentations</td>
@@ -497,9 +550,26 @@ To request new repositories, file a ticket to
   <td>ETC (Exposure Time Calculator)</td>
 </tr>
 <tr>
-  <td>Survey database</td>
+  <td rowspan="2">Survey database</td>
   <td><a href="https://github.com/Subaru-PFS/spt_operational_database">spt_operational_database</a></td>
   <td>Survey operational database</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/spt_qa_database">spt_qa_database</a></td>
+  <td>Database to store QA outputs from DRP as well as observation conditions.</td>
+</tr>
+<tr>
+  <td rowspan="3">OBSPROC</td>
+  <td><a href="https://github.com/Subaru-PFS/pfs_obsproc_planning_tools">pfs_obsproc_planning_tools</a></td>
+  <td>Tools to run PPP, queue planner, and pfsDesign generation script</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/Subaru-PFS/pfs_obsproc_qa_tools">pfs_obsproc_qa_tools</a></td>
+  <td>Tools to run QA procedure</td>
+</tr>
+<tr>
+  <td class="mit"><a href="https://github.com/Subaru-PFS/spt_target_uploader">spt_target_uploader</a></td>
+  <td>A web application to validate and upload target lists with pointing simulations for PFS observation</td>
 </tr>
 <tr>
   <td rowspan="2">Sciene Database</td>
